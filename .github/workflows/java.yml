@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - "aula02-ativdevops/**"
 
 jobs:
   executar-java:
@@ -13,10 +11,10 @@ jobs:
 
     steps:
       - name: Baixar código
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Configurar Java 21
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: "21"
